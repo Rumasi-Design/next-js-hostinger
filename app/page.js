@@ -111,3 +111,16 @@ export default function Home() {
     </main>
   );
 }
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {
+        params: {
+          name: "next.js",
+        },
+      }, // See the "paths" section below
+    ],
+    fallback: true, // false or "blocking"
+  };
+}
